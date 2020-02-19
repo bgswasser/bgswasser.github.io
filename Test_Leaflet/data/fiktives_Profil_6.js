@@ -1,1 +1,0 @@
-var json_fiktives_Profil_6 = {"type":"FeatureCollection","name":"fiktives_Profil_6","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"FID":"0"},"geometry":{"type":"MultiLineString","coordinates":[[[8.681716641526446,50.22412553033999],[8.682607153714471,50.225568488889152]]]}}]}
