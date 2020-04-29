@@ -87,11 +87,20 @@
         });
         layer_GoogleSatellite_0;
         map.addLayer(layer_GoogleSatellite_0);
+
         var img_Outputlayer_1 = 'data/Outputlayer_1.png';
         var img_bounds_Outputlayer_1 = [[50.1773067437212,11.763602686843791],[50.207133168421976,11.838977895977072]];
         var layer_Outputlayer_1 = new L.imageOverlay(img_Outputlayer_1, img_bounds_Outputlayer_1);
         bounds_group.addLayer(layer_Outputlayer_1);
         map.addLayer(layer_Outputlayer_1);
+
+        var img_Outputlayer_2 = 'data/Flowtraces.gif';
+        var img_bounds_Outputlayer_2 = [[50.187044578,11.802916332],[50.195644646,11.816107113]];
+        var img_bounds_Outputlayer_2 = [[50.188,11.802916332],[50.1947,11.816107113]];
+        var layer_Outputlayer_2 = new L.imageOverlay(img_Outputlayer_2, img_bounds_Outputlayer_2, {opacity: 0.7, zIndex: 100});
+        bounds_group.addLayer(layer_Outputlayer_2);
+        map.addLayer(layer_Outputlayer_2);
+
         function pop_Betrachtungsgrenze_3(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -129,11 +138,11 @@
         map.getPane('pane_Betrachtungsgrenze_3').style['mix-blend-mode'] = 'normal';
         var layer_Betrachtungsgrenze_3 = new L.geoJson(json_Betrachtungsgrenze_3, {
             attribution: '',
-            interactive: true,
+            // interactive: true,
             dataVar: 'json_Betrachtungsgrenze_3',
             layerName: 'layer_Betrachtungsgrenze_3',
             pane: 'pane_Betrachtungsgrenze_3',
-            onEachFeature: pop_Betrachtungsgrenze_3,
+            // onEachFeature: pop_Betrachtungsgrenze_3,
             style: style_Betrachtungsgrenze_3_0,
         });
         bounds_group.addLayer(layer_Betrachtungsgrenze_3);
