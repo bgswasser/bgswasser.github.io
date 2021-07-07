@@ -25,7 +25,6 @@
         </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
-        <script src="js/multi-style-layer.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
         <script src="js/leaflet.pattern.js"></script>
         <script src="js/leaflet-hash.js"></script>
@@ -84,33 +83,15 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        var pattern_NeuerTemporrlayer_1_0 = new L.StripePattern({
-            weight: 0.3,
-            spaceWeight: 2.0,
-            color: '#377eb8',
-            opacity: 1.0,
-            spaceOpacity: 0,
-            angle: 315
-        });
-        pattern_NeuerTemporrlayer_1_0.addTo(map);
         function style_NeuerTemporrlayer_1_0() {
             return {
                 pane: 'pane_NeuerTemporrlayer_1',
-                stroke: false,
-                fillOpacity: 1,
-                fillPattern: pattern_NeuerTemporrlayer_1_0,
-                interactive: true,
-            }
-        }
-        function style_NeuerTemporrlayer_1_1() {
-            return {
-                pane: 'pane_NeuerTemporrlayer_1',
                 opacity: 1,
-                color: 'rgba(55,126,184,1.0)',
+                color: 'rgba(228,26,28,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 2.0, 
+                weight: 4.0, 
                 fillOpacity: 0,
                 interactive: true,
             }
@@ -118,14 +99,14 @@
         map.createPane('pane_NeuerTemporrlayer_1');
         map.getPane('pane_NeuerTemporrlayer_1').style.zIndex = 401;
         map.getPane('pane_NeuerTemporrlayer_1').style['mix-blend-mode'] = 'normal';
-        var layer_NeuerTemporrlayer_1 = new L.geoJson.multiStyle(json_NeuerTemporrlayer_1, {
+        var layer_NeuerTemporrlayer_1 = new L.geoJson(json_NeuerTemporrlayer_1, {
             attribution: '',
             interactive: true,
             dataVar: 'json_NeuerTemporrlayer_1',
             layerName: 'layer_NeuerTemporrlayer_1',
             pane: 'pane_NeuerTemporrlayer_1',
             onEachFeature: pop_NeuerTemporrlayer_1,
-            styles: [style_NeuerTemporrlayer_1_0,style_NeuerTemporrlayer_1_1,]
+            style: style_NeuerTemporrlayer_1_0,
         });
         bounds_group.addLayer(layer_NeuerTemporrlayer_1);
         map.addLayer(layer_NeuerTemporrlayer_1);
